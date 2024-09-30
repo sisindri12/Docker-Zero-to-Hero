@@ -69,3 +69,41 @@ This structured approach should help you grasp the fundamental concepts of conta
 - How does Docker manage dependencies within a container?
 
 This structured approach should help you grasp the fundamental concepts of containers and Docker effectively!
+
+#### Day-3:
+
+# Study Notes for Django Web Application Deployment with Docker
+
+## Overview
+In this course, we focus on deploying Django web applications as Docker containers. This involves understanding both the concepts of containers and the specific steps to containerize a Django application.
+
+## Key Concepts
+
+### 1. **Containers vs. Virtual Machines**
+- **Containers** are lightweight and share the host system's kernel, making them more efficient than virtual machines (VMs) which require their own operating system.
+- Containers use specific files and folders from the kernel, allowing for better resource utilization and faster startup times .
+
+### 2. **Docker Architecture**
+- Understanding the architecture of Docker is crucial. It includes components like the Docker Engine, Docker Hub, and Docker CLI, which work together to build and manage containers .
+
+### 3. **Life Cycle of Docker**
+- The Docker life cycle includes stages such as building, running, and managing containers. Key commands include:
+  - **Docker Build**: To create a Docker image from a Dockerfile.
+  - **Docker Run**: To start a container from an image .
+
+## Containerizing a Django Application
+- A Django project typically consists of several components:
+  - **settings.py**: Configuration for the Django project.
+  - **views.py**: Contains the Python code for rendering templates and handling requests .
+
+### Steps to Containerize
+1. **Create a Dockerfile**: Define the environment and dependencies for your Django application.
+2. **Build the Docker Image**: Use the command `docker build -t your_image_name .` to create the image.
+3. **Run the Container**: Use the command `docker run -d -p 8000:8000 your_image_name` to start the application.
+
+## Important Commands
+- **Docker Build**: `docker build -t <image_name> .`
+- **Docker Run**: `docker run -d -p <host_port>:<container_port> <image_name>`
+
+## Conclusion
+Understanding these concepts and commands will help you effectively deploy Django applications using Docker. Make sure to practice these steps to become familiar with the process!
