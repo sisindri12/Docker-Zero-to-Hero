@@ -107,3 +107,40 @@ In this course, we focus on deploying Django web applications as Docker containe
 
 ## Conclusion
 Understanding these concepts and commands will help you effectively deploy Django applications using Docker. Make sure to practice these steps to become familiar with the process!
+
+##### Day-4:
+
+**Study Guide: Multi-Stage Docker Builds and Destroyless Images**
+
+**1. Introduction to Docker and Multi-Stage Builds**
+- Multi-stage builds allow you to create smaller, more efficient Docker images by separating the build environment from the runtime environment .
+- This technique improves efficiency and reduces image size significantly.
+
+**2. Concept of Multi-Stage Docker Builds**
+- A typical Docker build process involves using a base image (e.g., Ubuntu) and installing dependencies .
+- Multi-stage builds split the Dockerfile into multiple stages, allowing you to use a rich base image for building and a minimal image for running .
+
+**3. Steps in Multi-Stage Builds**
+- **Stage 1**: Use a full-featured base image (e.g., Ubuntu) to install dependencies and build the application.
+- **Stage 2**: Use a minimal image (e.g., Python or Java runtime) to run the application, copying only the necessary binaries from the first stage .
+
+**4. Example: Building a Calculator Application**
+- Start with a base image (e.g., Ubuntu) and install Python .
+- Build the application, then copy the binary to a minimal runtime image in the final stage .
+
+**5. Advantages of Multi-Stage Builds**
+- **Reduced Image Size**: Final images can be significantly smaller (e.g., from 861 MB to 1.83 MB) .
+- **Security**: Smaller images have fewer vulnerabilities, as they contain only necessary components .
+
+**6. Introduction to Destroyless Images**
+- Destroyless images are minimalistic images that contain only the runtime environment needed to execute applications .
+- These images often lack common utilities, enhancing security by reducing attack surfaces .
+
+**7. Practical Example with Go Language**
+- Using Go, you can create a Docker image that is even smaller (e.g., 1.83 MB) by leveraging multi-stage builds and destroyless images .
+
+**8. Finding Destroyless Images**
+- Search for repositories that list destroyless images for various languages (e.g., Python, Java) to find suitable base images for your applications .
+
+**9. Conclusion**
+- Multi-stage builds and destroyless images are essential techniques in modern containerization, providing significant benefits in terms of efficiency and security.
