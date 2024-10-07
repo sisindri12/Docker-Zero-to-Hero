@@ -288,5 +288,6 @@ This guide provides a comprehensive overview of Docker concepts, commands, and b
 ####### **docker-compose**:
 - **** docker compose and kuberntes are server two different purposes
 - **** docker compose is used for local development and running tests with few services in fasterway as if we use docker to build/run multi-container appliation it will take much time and difficult to include dependencies, where docker-compose comes into handy.
+- **** to manage lifecycle of mutiple contanes we can use declarative approach to build and run and manage the containers using yaml file. i.e. docker-compose
 - **** kuberntes is very powerful and it compleltrly used for container orchestration and it severs autoscale and load balancing and automanagement
 
